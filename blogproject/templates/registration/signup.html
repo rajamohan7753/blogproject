@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="container">
+      <div class="login--wrapper">
+        <form  method="post">
+              <h1>Register</h1>
+               {{form.as_p}}
+               {%csrf_token%}
+               <input type="submit" class='btn btn-primary' value="signup">
+               <p>Already have an account <a href="{% url 'login' %}">Login</a>
+               </p>
+        </form>
+
+  </div>
+</div>
+
+{% endblock %}
